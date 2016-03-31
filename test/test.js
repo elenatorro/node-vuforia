@@ -2,7 +2,6 @@ var VuforiaAPI = require('../lib').API;
 var fs = require('fs');
 var assert = require('chai').assert;
 
-
 var vuforia = new VuforiaAPI(require('../config/access.json'));
 var encoder = require('../lib/encoder');
 
@@ -10,8 +9,8 @@ var encoder = require('../lib/encoder');
 var fixtures = {
     "application_metadata": "https://developer.vuforia.com/samples/cloudreco/json/samplebook2.json",
     "obj": {
-        "image": "http://example.com/coolpic.jpeg",
-        "name": "Cool Product"
+        "image": "http://example.com/constructor.png",
+        "name": "constructor2"
     }
 };
 
@@ -59,9 +58,9 @@ describe("Should create", function(){
 
     it("target", function(done){
         var object = {
-            "name": "McLaren MP4-12C",
-            "width": 320.0,
-            "image": __dirname + "/fixtures/testimage.jpeg", // path to file base64 encoded data
+            "name": "constructor2",
+            "width": 300.0,
+            "image": __dirname + "/images/constructor2.png", // path to file base64 encoded data
             "active_flag": true,
             "application_metadata": fixtures.application_metadata
         };

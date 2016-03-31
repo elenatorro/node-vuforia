@@ -1,3 +1,6 @@
+.DS_Store
+config/access.json
+
 lib-cov
 *.seed
 *.log
